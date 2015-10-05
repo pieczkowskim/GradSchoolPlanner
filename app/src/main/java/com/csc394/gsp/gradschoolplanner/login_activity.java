@@ -36,7 +36,7 @@ public class login_activity extends Activity {
                 String text = username.getText().toString()+" "+pass.getText().toString();
                 Toast tpo = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
                 tpo.show();
-                new communicator().execute("register",username.getText(),pass.getText());
+
 
 
             }
@@ -48,7 +48,6 @@ public class login_activity extends Activity {
                 String text = username.getText().toString()+" "+pass.getText().toString();
                 Toast tpo = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
                 tpo.show();
-                new communicator().execute("logon", username.getText(), pass.getText());
 
 
             }
@@ -70,35 +69,6 @@ public class login_activity extends Activity {
 
     }
 
-    //handles sending commands to server
-    public class communicator extends AsyncTask{
-        @Override
-        protected Object doInBackground(Object[] params) {
-            try {
-                //Toast t = Toast.makeText(getApplicationContext(), "connecting", Toast.LENGTH_SHORT);
-                //t.show();
-                InetAddress addr = InetAddress.getByName("heebie.ddns.net");
-                Socket s = new Socket(addr,12333);
-                PrintWriter output = new PrintWriter(s.getOutputStream(),true);
-                BufferedReader br = new BufferedReader(( new InputStreamReader(s.getInputStream())));
 
-                //sending text to server
-                output.println(params[0]);//logon or register
-
-
-                output.println(params[1] + "," + params[2]);//username,password
-
-
-
-                output.flush();
-
-            }
-            catch(Exception e)
-            {
-//                Toast t = Toast.makeText(getApplicationContext(), "Connection Error", Toast.LENGTH_SHORT);
-//                t.show();
-            }
-            return null;
-        }
     }
 }
