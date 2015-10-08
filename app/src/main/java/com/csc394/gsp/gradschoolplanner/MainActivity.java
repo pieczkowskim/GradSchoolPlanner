@@ -1,5 +1,6 @@
 package com.csc394.gsp.gradschoolplanner;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,12 +14,13 @@ import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     ExpandableCourseAdapter adapter;
     ExpandableListView view;
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -66,6 +69,15 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            //open settings
+            Intent intent = new Intent(getApplicationContext(),SettingsActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else if (id == R.id.logon) {
+            //open settings
+            Intent intent = new Intent(getApplicationContext(),login_activity.class);
+            startActivity(intent);
             return true;
         }
 

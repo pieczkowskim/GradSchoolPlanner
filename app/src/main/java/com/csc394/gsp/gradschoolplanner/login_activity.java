@@ -5,8 +5,7 @@ package com.csc394.gsp.gradschoolplanner;
  */
 
 
-import android.app.Activity;
-import android.os.AsyncTask;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,13 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.Socket;
 
-public class login_activity extends Activity {
+
+public class login_activity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +33,6 @@ public class login_activity extends Activity {
                 tpo.show();
 
 
-
             }
         });
 
@@ -48,8 +42,9 @@ public class login_activity extends Activity {
                 String text = username.getText().toString()+" "+pass.getText().toString();
                 Toast tpo = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
                 tpo.show();
-
-
+                //if logon successful go to mainactivity
+//                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+//                startActivity(intent);
             }
         });
         username.setOnClickListener(new View.OnClickListener() {//clears text when clicked
@@ -70,5 +65,4 @@ public class login_activity extends Activity {
     }
 
 
-    }
 }
