@@ -30,7 +30,8 @@
         <activity
             android:name=".login_activity"
             android:label="@string/logon"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Base.Theme.AppCompat">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.csc394.gsp.gradschoolplanner.MainActivity" />
