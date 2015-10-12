@@ -1,5 +1,6 @@
 package com.csc394.gsp.gradschoolplanner;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class CourseInfo extends AppCompatActivity {
+public class CourseInfo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
