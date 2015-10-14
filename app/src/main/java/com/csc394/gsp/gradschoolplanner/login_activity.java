@@ -6,6 +6,7 @@ package com.csc394.gsp.gradschoolplanner;
 
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 
 
 
-public class login_activity extends AppCompatActivity {
+public class login_activity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
