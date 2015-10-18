@@ -41,7 +41,7 @@ public class ExpandableCourseAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater)this.context.getSystemService(
                     Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.course_item, null);
+            convertView = inflater.inflate(R.layout.course_item, parent, false);
         }
 
         TextView txtChild = (TextView) convertView.findViewById(R.id.lblListItem);
@@ -75,7 +75,7 @@ public class ExpandableCourseAdapter extends BaseExpandableListAdapter {
         String headerTitle = (String)getGroup(groupPosition);
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.course_header, null);
+            convertView = inflater.inflate(R.layout.course_header, parent, false);
         }
 
         TextView header = (TextView) convertView.findViewById(R.id.lblListHeader);

@@ -1,14 +1,7 @@
 package com.csc394.gsp.gradschoolplanner;
 
-/**
- * Created by Colin on 10/2/2015.
- */
-
-
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,12 +14,12 @@ public class login_activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-        final Button button1 = (Button) findViewById(R.id.button);//register
-        final Button button2 = (Button) findViewById(R.id.button2);//logon
+        final Button registerButton = (Button) findViewById(R.id.registerButton);
+        final Button logonButton = (Button) findViewById(R.id.logonButton);
         final EditText username = (EditText) (findViewById(R.id.loginusername));
         final EditText pass = (EditText) (findViewById(R.id.loginpass));
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
         //this is supposed to send username and password for authentication
             public void onClick(View v) {
                 String text = username.getText().toString()+" "+pass.getText().toString();
@@ -37,7 +30,7 @@ public class login_activity extends Activity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        logonButton.setOnClickListener(new View.OnClickListener() {
             //this is supposed to send username and password for authentication
             public void onClick(View v) {
                 String text = username.getText().toString()+" "+pass.getText().toString();
