@@ -3,7 +3,6 @@ package com.csc394.gsp.gradschoolplanner;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,9 +16,8 @@ public class MainActivity extends Activity {
 
     ExpandableCourseAdapter adapter;
     ExpandableListView view;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
-
+    List<String> headersQuarters;
+    HashMap<String, List<String>> coursesByQuarter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,7 @@ public class MainActivity extends Activity {
 
         prepareListData();
 
-        adapter = new ExpandableCourseAdapter(this, listDataHeader, listDataChild);
+        adapter = new ExpandableCourseAdapter(this, headersQuarters, coursesByQuarter);
 
         view.setAdapter(adapter);
         view.expandGroup(0);
@@ -79,27 +77,27 @@ public class MainActivity extends Activity {
     }
 
     private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
-        listDataChild  = new HashMap<String, List<String>>();
+        headersQuarters = new ArrayList<>();
+        coursesByQuarter  = new HashMap<>();
 
-        listDataHeader.add("Fall 2015");
-        listDataHeader.add("Winter 2016");
-        listDataHeader.add("Spring 2016");
+        headersQuarters.add("Fall 2015");
+        headersQuarters.add("Winter 2016");
+        headersQuarters.add("Spring 2016");
 
-        listDataHeader.add("Fall 2016");
-        listDataHeader.add("Winter 2017");
-        listDataHeader.add("Spring 2017");
+        headersQuarters.add("Fall 2016");
+        headersQuarters.add("Winter 2017");
+        headersQuarters.add("Spring 2017");
 
-        listDataHeader.add("Fall 2017");
+        headersQuarters.add("Fall 2017");
 
 
-        List<String> quarter1 = new ArrayList<String>();
-        List<String> quarter2 = new ArrayList<String>();
-        List<String> quarter3 = new ArrayList<String>();
-        List<String> quarter4 = new ArrayList<String>();
-        List<String> quarter5 = new ArrayList<String>();
-        List<String> quarter6 = new ArrayList<String>();
-        List<String> quarter7 = new ArrayList<String>();
+        List<String> quarter1 = new ArrayList<>();
+        List<String> quarter2 = new ArrayList<>();
+        List<String> quarter3 = new ArrayList<>();
+        List<String> quarter4 = new ArrayList<>();
+        List<String> quarter5 = new ArrayList<>();
+        List<String> quarter6 = new ArrayList<>();
+        List<String> quarter7 = new ArrayList<>();
 
         quarter1.add("CSC 423 - Data Analysis and Regression");
         quarter1.add("CSC 425 - Time Series Analysis and Forecasting");
@@ -121,14 +119,14 @@ public class MainActivity extends Activity {
 
         quarter7.add("CSC 559 - Software Engineering for Financial Markets");
 
-        listDataChild.put(listDataHeader.get(0), quarter1);
-        listDataChild.put(listDataHeader.get(1), quarter2);
-        listDataChild.put(listDataHeader.get(2), quarter3);
-        listDataChild.put(listDataHeader.get(3), quarter4);
-        listDataChild.put(listDataHeader.get(4), quarter5);
-        listDataChild.put(listDataHeader.get(5), quarter6);
-        listDataChild.put(listDataHeader.get(6), quarter7);
-        listDataChild.put(listDataHeader.get(6), quarter7);
+        coursesByQuarter.put(headersQuarters.get(0), quarter1);
+        coursesByQuarter.put(headersQuarters.get(1), quarter2);
+        coursesByQuarter.put(headersQuarters.get(2), quarter3);
+        coursesByQuarter.put(headersQuarters.get(3), quarter4);
+        coursesByQuarter.put(headersQuarters.get(4), quarter5);
+        coursesByQuarter.put(headersQuarters.get(5), quarter6);
+        coursesByQuarter.put(headersQuarters.get(6), quarter7);
+        coursesByQuarter.put(headersQuarters.get(6), quarter7);
 
     }
 
