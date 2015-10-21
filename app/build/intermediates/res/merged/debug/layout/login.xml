@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_gravity="top">
+
+
+        <EditText
+            android:id="@+id/loginusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="UserName"
+            android:ems="10"
+            android:layout_weight="1"
+            android:layout_gravity="top|start" />
+
+
+
+        <EditText
+            android:id="@+id/loginpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:text="Password"
+            android:layout_weight="1"
+            android:layout_gravity="top|start" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_gravity="start|bottom">
+
+        <Button
+            android:id="@+id/logonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_weight="1"
+            android:layout_gravity="start" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/Users/Gosia_Samosia/Desktop/android/GradSchoolPlanner/app/src/main/res/layout/login.xml -->

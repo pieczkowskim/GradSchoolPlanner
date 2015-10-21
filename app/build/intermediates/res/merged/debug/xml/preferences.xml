@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Your Name"
+        android:key="Your Name"
+        android:summary="Please provide your username"></EditTextPreference>
+    <EditTextPreference android:title="ID Number"
+        android:key="Your Student ID #"
+        android:summary="Please provide your student ID Number"></EditTextPreference>
+    <EditTextPreference android:title="Your Major"
+        android:key="Your Major"
+        android:summary="Please provide your Major"></EditTextPreference>
+
+</PreferenceScreen><!-- From: file:/Users/Gosia_Samosia/Desktop/android/GradSchoolPlanner/app/src/main/res/xml/preferences.xml -->
